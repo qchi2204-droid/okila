@@ -38,7 +38,7 @@ export const GMAIL_SCOPES = [
 ];
 
 export function getGmailRedirectUri(): string {
-  return AuthSession.makeRedirectUri({ scheme: 'expensetracker' });
+  return AuthSession.makeRedirectUri({ scheme: 'expense-tracker' });
 }
 
 export function getGmailAuthRequestConfig(): AuthSession.AuthRequestConfig {
@@ -48,6 +48,7 @@ export function getGmailAuthRequestConfig(): AuthSession.AuthRequestConfig {
     redirectUri: getGmailRedirectUri(),
     responseType: AuthSession.ResponseType.Code,
     usePKCE: true,
+    codeChallengeMethod: AuthSession.CodeChallengeMethod.S256,
     extraParams: {
       access_type: 'offline',
       prompt: 'consent',

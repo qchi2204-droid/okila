@@ -12,6 +12,7 @@ import { useFocusEffect } from '@react-navigation/native';
 import dayjs from 'dayjs';
 import { Transaction, Source, Category } from '../types';
 import { getTransactions } from '../services/storage';
+import { mockTransactions } from '../services/mockData';
 import { colors, radius, spacing } from '../constants/theme';
 import { formatVnd } from '../utils/format';
 import MiniBarChart from '../components/MiniBarChart';
@@ -34,7 +35,8 @@ export default function HomeScreen() {
 
   const load = useCallback(async () => {
     const all = await getTransactions();
-    setTransactions(all);
+    // In development, fall back to mock data so the UI is never empty.
+    setTransactions(__DEV__ && all.length === 0 ? mockTransactions : all);
   }, []);
 
   useFocusEffect(

@@ -6,16 +6,16 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "scheme": "expensetracker",
+    "scheme": "expense-tracker",
     "splash": {
       "backgroundColor": "#FAFAF9"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.expensetracker.app"
+      "bundleIdentifier": "com.personal.expensetracker"
     },
     "android": {
-      "package": "com.expensetracker.app",
+      "package": "com.personal.expensetracker",
       "adaptiveIcon": {
         "backgroundColor": "#FAFAF9",
         "foregroundImage": "./assets/android-icon-foreground.png"
@@ -34,6 +34,14 @@
         {
           "icon": "./assets/icon.png",
           "color": "#111111"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 34
+          }
         }
       ]
     ]
