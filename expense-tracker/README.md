@@ -1,6 +1,6 @@
 # Expense Tracker
 
-React Native + Expo SDK 51 app that tracks expenses manually or via automatic
+React Native + Expo SDK 54 app that tracks expenses manually or via automatic
 parsing of BIDV transaction notification emails from Gmail.
 
 ## Setup
