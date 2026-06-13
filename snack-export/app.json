@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "expense-tracker",
+    "slug": "expense-tracker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "sdkVersion": "51.0.0",
+    "splash": {
+      "backgroundColor": "#FAFAF9"
+    }
+  }
+}
